@@ -169,6 +169,13 @@
     .service-list li, .awards-list li {
         margin-bottom: 8px;
     }
+    .service-list ul, .grants-list ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+    .service-list li, .grants-list li {
+        margin-bottom: 8px;
+    }
     @media (max-width: 768px) {
         .container {
             flex-direction: column;
@@ -202,7 +209,7 @@
 <div class="container">
   <aside class="sidebar">
     <img src="images/icml_2023_at_hawaii.jpeg" alt="Dai Zhongxiang">
-    <h1>Dai Zhongxiang</h1>
+    <h1>Dai Zhongxiang <br>代忠祥</h1>
     <p>
       Assistant Professor<br>
       Presidential Young Fellow<br>
@@ -220,13 +227,14 @@
     <nav>
       <ul>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#news">News</a></li>
+        <!-- <li><a href="#news">News</a></li> -->
 <!--         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li> -->
         <li><a href="#preprints">Preprints</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#honors">Awards</a></li>
+        <li><a href="#grants">Funding</a></li>
         <li><a href="#service">Service</a></li>
+        <li><a href="#honors">Awards</a></li>
       </ul>
     </nav>
   </aside>
@@ -238,7 +246,8 @@
         I am an Assistant Professor and Presidential Young Fellow at the School of Data Science (SDS), The Chinese University of Hong Kong, Shenzhen (CUHKSZ) since Aug 2024. I am looking for PhD students, RAs, and visiting students/interns. Please feel free to <a href="mailto:daizhongxiang@cuhk.edu.cn">reach out</a> if you're interested in working with me.
       </p>
       <p>
-        I work on both the theory and practice of AI/machine learning. On the practical side, I'm mostly interested in <b><span style="color:#20948B">large language models (LLMs)</span></b>, including <b><span style="color:#20948B">LLM-based agents</span></b>, personalization of LLMs, LLM routing, prompt optimization, and RLHF/DPO, all of which can be studied from the perspective of multi-armed bandits (MAB) and Bayesian optimization (BO). On the theoretical side, I'm mainly interested in <b><span style="color:#CD5C5C">the theoretical study of MAB and BO</span></b>.
+        I work on both the theory and practice of AI/machine learning. On the practical side, I'm mostly interested in <b><span style="color:#20948B">large language models (LLMs)</span></b>, including <b><span style="color:#20948B">LLM-based agents</span></b>, personalization of LLMs, LLM routing, prompt optimization, and RLHF/DPO, all of which can be studied from the perspective of multi-armed bandits (MAB) and Bayesian optimization (BO). On the theoretical side, I'm mainly interested in <b><span style="color:#CD5C5C">the theoretical study of MAB and BO</span></b>. 
+        <!-- My research is generously supported by multiple grants, including NSFC Youth Fund (国家自然科学基金青年基金(C类)), Shenzhen 深圳市自然科学基金面上项目, 华为AI Agent合作项目. -->
       </p>
       <p>
         From Jan 2024 to Jun 2024, I worked as a Postdoctoral Associate at MIT, Laboratory for Information and Decision Systems (LIDS), advised by Prof. Patrick Jaillet. 
@@ -247,24 +256,27 @@
       </p>
     </section>
 
-    <section id="news">
+
+<!--     <section id="news">
       <h2>News</h2>
       <ul class="news-list">
+        <li><span class="date">Nov 2025</span> <span>Our paper on Dueling Bandits accepted to AAAI 2026!</li>
         <li><span class="date">Sep 2025</span> <span>Two papers accepted to NeurIPS 2025!</li>
         <li><span class="date">Aug 2025</span> <span>Invited to serve as an <b><span style="color:#CD5C5C">Area Chair for ICLR 2026</span></span></b>!</li>
         <li><span class="date">May 2025</span> <span>Our paper on LLM source attribution & watermaking accepted to ACL 2025 Findings!</li>
         <li><span class="date">May 2025</span> <span>2 papers accepted to ICML 2025!</li>
         <li><span class="date">Apr 2025</span> <span>Invited to serve as an <b><span style="color:#CD5C5C">Area Chair for NeurIPS 2025</span></b>!</li>
         <li><span class="date">Apr 2025</span> <span>Our <a href="https://jmlr.org/papers/v26/22-0523.html">paper on Bayesian optimization</a> accepted to <b><span style="color:#CD5C5C">Journal of Machine Learning Research (JMLR)</span></b>!<span></li>
-<!--         <li><span class="date">Mar 2025</span><span>2 papers on <b><span style="color:#CD5C5C">LLM Agents</span></b> from my students accepted to ICLR 2025 Workshop on Reasoning and Planning for Large Language Models!</span></li>
+ --><!--         <li><span class="date">Mar 2025</span><span>2 papers on <b><span style="color:#CD5C5C">LLM Agents</span></b> from my students accepted to ICLR 2025 Workshop on Reasoning and Planning for Large Language Models!</span></li>
         <li><span class="date">Jan 2025</span> <span>Our paper on <b><span style="color:#CD5C5C">Neural Dueling Bandits</span></b> accepted to ICLR 2025!</span></li>
         <li><span class="date">Dec 2024</span> <span>Gave a talk at ByteDance on the topic of <b><span style="color:#CD5C5C">Enhancing Inference for Large Language Models</span></b>!</span></li>
         <li><span class="date">Sep 2024</span> <span>Our 2 papers on <b><span style="color:#CD5C5C">prompt optimization</span></b> and <b><span style="color:#CD5C5C">exemplar selection</span></b> accepted to NeurIPS 2024!</span></li>
         <li><span class="date">Sep 2024</span> <span>Gave a talk at HKUST(GZ), AI Thrust Seminars on the topic of "Prompt Optimization for LLMs"!</span></li>
         <li><span class="date">Aug 2024</span> <span>Invited to serve as an <b><span style="color:#CD5C5C">Area Chair for ICLR 2025</span></b>!</span></li>
         <li><span class="date">Aug 2024</span> <span>I've joined CUHKSZ as an Assistant Professor and Presidential Young Fellow!</span></li> -->
-      </ul>
+<!--       </ul>
     </section>
+ -->
 
 <!-- 
     <section id="education" class="experience-list">
@@ -315,7 +327,7 @@
     </section> -->
 
     <section id="preprints">
-        <h2>Selected Workshop Papers & Preprints</h2>
+        <h2>Recent Preprints</h2>
         <p>* denotes equal contribution, <span>&#8224;</span> denotes corresponding author, <span>&#127891;</span> denotes my students.</p>
         <ol class="publication-list">
             <li>
@@ -338,11 +350,11 @@
                 <p class="authors">Jiahang Sun*<span>&#127891;</span>, Zhiyong Wang*, Runhan Yang*<span>&#127891;</span>, Chenjun Xiao, John C.S. Lui, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
                 <p class="venue">ICLR 2025 Workshop on Reasoning and Planning for Large Language Models. <a href="https://arxiv.org/abs/2502.01118">[arXiv]</a></p>
             </li>
-            <li>
+<!--             <li>
                 <p class="title"><a href="https://arxiv.org/abs/2502.01085">Federated Linear Dueling Bandits.</a></p>
                 <p class="authors">Xuhan Huang<span>&#127891;</span>, Yan Hu, Zhiyan Li<span>&#127891;</span>, Zhiyong Wang, Benyou Wang, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
                 <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2502.01085">[arXiv]</a></p>
-            </li>
+            </li> -->
 <!--             <li>
                 <p class="title"><a href="https://arxiv.org/abs/2506.17252">Adaptive Sample Scheduling for Direct Preference Optimization.</a></p>
                 <p class="authors">Zixuan Huang, Yikun Ban, Lean Fu, Xiaojie Li, <b>Zhongxiang Dai</b>, Jianxin Li, Deqing Wang</p>
@@ -375,7 +387,7 @@
             </li>
         </ol>
         <style>
-          #preprints .publication-list { counter-reset: publication 10; }
+          #preprints .publication-list { counter-reset: publication 9; }
           #preprints .publication-list li::before { content: "[P" counter(publication) "]"; counter-increment: publication -1; }
         </style>
     </section>
@@ -384,6 +396,11 @@
       <h2>Publications</h2>
       <p>* denotes equal contribution, <span>&#8224;</span> denotes corresponding author, <span>&#127891;</span> denotes my students.</p>
       <ol class="publication-list">
+        <li>
+            <p class="title"><a href="https://arxiv.org/abs/2502.01085">Federated Linear Dueling Bandits.</a></p>
+            <p class="authors">Xuhan Huang<span>&#127891;</span>, Yan Hu, Zhiyan Li<span>&#127891;</span>, Zhiyong Wang, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
+            <p class="venue">AAAI 2026. <a href="https://arxiv.org/abs/2502.01085">[arXiv]</a></p>
+        </li>
         <li>
             <p class="title"><a href="https://arxiv.org/abs/2505.11323">Convergence Rates of Constrained Expected Improvement.</a></p>
             <p class="authors">Haowei Wang, Jingyi Wang, <b>Zhongxiang Dai</b>, Nai-Yuan Chiang, Szu Hui Ng, Cosmin G. Petra.</p>
@@ -561,10 +578,19 @@
         </li>
       </ol>
       <style>
-          #publications .publication-list { counter-reset: publication 36; }
+          #publications .publication-list { counter-reset: publication 37; }
           #publications .publication-list li::before { content: "[" counter(publication) "]"; counter-increment: publication -1; }
       </style>
     </section>
+
+<!-- 
+    <section id="grants" class="grants-list">
+      <h2>Funding（科研项目）</h2>
+      <ul>
+        <li>
+      </ul>
+    </section>
+ -->
 
     <section id="honors" class="awards-list">
       <h2>Awards and Honors</h2>
