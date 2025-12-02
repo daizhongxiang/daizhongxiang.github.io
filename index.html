@@ -1,648 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Dai Zhongxiang</title>
-  <meta name="author" content="Dai Zhongxiang">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fdfdfd;
-      margin: 0;
-      padding: 0;
-      font-size: 16px;
-    }
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 40px auto;
-    }
-    .sidebar {
-      width: 250px;
-      padding-right: 40px;
-      border-right: 1px solid #eee;
-      position: sticky;
-      top: 40px;
-      align-self: flex-start;
-      max-height: calc(100vh - 80px); /* Set max height relative to viewport */
-      overflow-y: auto;               /* Add scrollbar if content overflows */
-    }
-    .sidebar img {
-      width: 100%;
-      border-radius: 5px;
-    }
-    .sidebar h1 {
-      font-size: 24px;
-      margin-top: 15px;
-      margin-bottom: 5px;
-    }
-    .sidebar p {
-      margin: 0 0 10px 0;
-      font-size: 14px;
-      color: #555;
-    }
-    .sidebar a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-    .sidebar .links p {
-        margin-bottom: 5px;
-    }
-    .sidebar nav ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-    .sidebar nav li a {
-      display: block;
-      padding: 8px 0;
-      font-weight: bold;
-      color: #333;
-    }
-    .sidebar nav li a:hover {
-        color: #007bff;
-        text-decoration: none;
-    }
-    .main-content {
-      flex: 1;
-      padding-left: 40px;
-    }
-    h2 {
-      font-size: 28px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-      margin-top: 0;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    a {
-        color: #007bff;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    .news-list {
-        list-style-type: none;
-        padding-left: 0;
-    }
-    .news-list li {
-        margin-bottom: 10px;
-        display: flex;
-    }
-    .news-list .date {
-        color: #888;
-        width: 100px;
-        flex-shrink: 0;
-    }
-    .publication-list {
-        list-style: none;
-        padding: 0;
-    }
-    .publication-list li {
-        margin-bottom: 25px;
-        padding-left: 45px;
-        position: relative;
-    }
-    .publication-list li::before {
-        content: "[" counter(publication) "]";
-        counter-increment: publication;
-        position: absolute;
-        left: 0;
-        top: 2px;
-        font-weight: bold;
-    }
-    .publication-list .title {
-        font-weight: bold;
-        font-size: 17px;
-        margin: 0;
-    }
-    .publication-list .authors {
-        margin: 5px 0;
-    }
-    .publication-list .authors b {
-        color: #000;
-    }
-    .publication-list .venue {
-        font-style: italic;
-        color: #555;
-        margin: 5px 0;
-    }
-    /* --- CSS FIX STARTS HERE --- */
-    .publication-list .venue a {
-        margin-left: 10px; /* Changed from margin-right */
-        font-weight: bold;
-        font-style: normal; /* Keep links non-italic */
-    }
-    /* --- CSS FIX ENDS HERE --- */
-    .experience-list ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-    .experience-list > ul > li {
-        margin-bottom: 20px;
-    }
-    .experience-list .job-title {
-        font-weight: bold;
-    }
-    .experience-list .company {
-        font-style: italic;
-        color: #555;
-    }
-    .experience-list ul ul {
-        padding-left: 20px;
-        list-style-type: circle;
-        margin-top: 5px;
-    }
-    .service-list ul, .awards-list ul {
-        padding-left: 20px;
-        list-style-type: disc;
-    }
-    .service-list li, .awards-list li {
-        margin-bottom: 8px;
-    }
-    .service-list ul, .grants-list ul {
-        padding-left: 20px;
-        list-style-type: disc;
-    }
-    .service-list li, .grants-list li {
-        margin-bottom: 8px;
-    }
-    @media (max-width: 768px) {
-        .container {
-            flex-direction: column;
-            margin: 20px;
-        }
-        .sidebar {
-            width: 100%;
-            border-right: none;
-            position: static;
-            padding-right: 0;
-            text-align: center;
-            max-height: none; /* Disable scroll behavior on mobile */
-            overflow-y: visible;
-        }
-        .sidebar img {
-            max-width: 200px;
-            margin: 0 auto;
-        }
-        .sidebar nav ul {
-            text-align: center;
-        }
-        .main-content {
-            padding-left: 0;
-            margin-top: 20px;
-        }
-    }
-  </style>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="shortcut icon" type="image/png" href="images/seal_icon.png" />
+<title>Zhongxiang Dai</title>
 </head>
 <body>
-
-<div class="container">
-  <aside class="sidebar">
-    <img src="images/icml_2023_at_hawaii.jpeg" alt="Dai Zhongxiang">
-    <h1>Dai Zhongxiang <br>代忠祥</h1>
-    <p>
-      Assistant Professor<br>
-      国家级高层次青年人才<br>
-      Presidential Young Fellow<br>
-      <a href="https://sds.cuhk.edu.cn/en">School of Data Science (SDS)</a><br>
-      <a href="https://www.cuhk.edu.cn/en">CUHK, Shenzhen</a>
-    </p>
-    <div class="links">
-        <p>Email: daizhongxiang [at] cuhk.edu.cn</p>
-        <p>
-            <a href="https://scholar.google.com/citations?user=1v8xOIYAAAAJ&hl=en">Google Scholar</a> /
-            <a href="https://twitter.com/Dai_Zh">Twitter</a> /
-            <a href="https://github.com/daizhongxiang">Github</a>
-        </p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <!-- <li><a href="#news">News</a></li> -->
-<!--         <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li> -->
-        <li><a href="#preprints">Preprints</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <!-- <li><a href="#grants">Funding</a></li> -->
-        <li><a href="#honors">Awards</a></li>
-        <li><a href="#service">Service</a></li>
-      </ul>
-    </nav>
-  </aside>
-
-  <main class="main-content">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am an Assistant Professor (Presidential Young Fellow) at the School of Data Science (SDS), The Chinese University of Hong Kong, Shenzhen (CUHKSZ) since Aug 2024. 
-        <b><span style="color:#CD5C5C">We have many openings for PhD/MPhil students for 2026 Fall admission, and we are also looking for Research Assistants and visiting students/interns</span></b>.
-        <!-- I am looking for PhD students, RAs, and visiting students/interns. Please feel free to <a href="mailto:daizhongxiang@cuhk.edu.cn">reach out</a> if you're interested in working with me. -->
-      </p>
-      <p>
-        I work on both the theory and applications of AI/machine learning. On the practical side, I'm mostly interested in large language models (LLMs), including <b>LLM-based agents, personalization of LLMs, LLM routing, LLM-based social simulation, prompt optimization, and RLHF/DPO</b>.
-        <!-- , all of which can be studied from the perspective of multi-armed bandits (MAB) and Bayesian optimization (BO).  -->
-        On the theoretical side, I'm mainly interested in the theoretical study of <b>multi-armed bandits</b>. 
-        I have served as Area Chair (AC) for NeurIPS, ICML and ICLR.
-      </p>
-      <p>
-        My research has received supports from multiple grants, such as
-        <ul>
-            <li> NSFC Young Scientist Fund (国家自然科学基金青年基金(C类))</li>
-            <li> Guangdong Provincial NSF Excellent Young Scientists Fund (广东省自然科学基金优秀青年项目)</li>
-            <li> Shenzhen NSF General Program (深圳市自然科学基金面上项目)</li>
-            <li> Collaboration project with Huawei on LLM Agents (华为大模型智能体合作项目)</li>
-        </ul>
-        </p>
-      <p>
-        <b>Experience:</b>
-        From Jan 2024 to Jun 2024, I worked as a Postdoctoral Associate at MIT, Laboratory for Information and Decision Systems (LIDS), advised by Prof. <a href="https://web.mit.edu/jaillet/www/">Patrick Jaillet</a>.
-        From 2021 to 2023, I was a Postdoctoral Fellow at the National University of Singapore (NUS) with Prof. <a href="https://www.comp.nus.edu.sg/~lowkh/">Bryan Kian Hsiang Low</a>.
-        I obtained my Ph.D. in Computer Science from NUS (2017-2021), co-advised by Prof. Bryan Kian Hsiang Low (NUS) and Prof. Patrick Jaillet (MIT). My Ph.D. study was supported by Singapore-MIT Alliance for Research and Technology (SMART) Graduate Fellowship.
-        In 2015, I obtained my undergraduate degree from NUS, Electrical Engineering with first class honors.
-      </p>
-    </section>
-
-
-<!--     <section id="news">
-      <h2>News</h2>
-      <ul class="news-list">
-        <li><span class="date">Nov 2025</span> <span>Our paper on Dueling Bandits accepted to AAAI 2026!</li>
-        <li><span class="date">Sep 2025</span> <span>Two papers accepted to NeurIPS 2025!</li>
-        <li><span class="date">Aug 2025</span> <span>Invited to serve as an <b><span style="color:#CD5C5C">Area Chair for ICLR 2026</span></span></b>!</li>
-        <li><span class="date">May 2025</span> <span>Our paper on LLM source attribution & watermaking accepted to ACL 2025 Findings!</li>
-        <li><span class="date">May 2025</span> <span>2 papers accepted to ICML 2025!</li>
-        <li><span class="date">Apr 2025</span> <span>Invited to serve as an <b><span style="color:#CD5C5C">Area Chair for NeurIPS 2025</span></b>!</li>
-        <li><span class="date">Apr 2025</span> <span>Our <a href="https://jmlr.org/papers/v26/22-0523.html">paper on Bayesian optimization</a> accepted to <b><span style="color:#CD5C5C">Journal of Machine Learning Research (JMLR)</span></b>!<span></li>
- --><!--         <li><span class="date">Mar 2025</span><span>2 papers on <b><span style="color:#CD5C5C">LLM Agents</span></b> from my students accepted to ICLR 2025 Workshop on Reasoning and Planning for Large Language Models!</span></li>
-        <li><span class="date">Jan 2025</span> <span>Our paper on <b><span style="color:#CD5C5C">Neural Dueling Bandits</span></b> accepted to ICLR 2025!</span></li>
-        <li><span class="date">Dec 2024</span> <span>Gave a talk at ByteDance on the topic of <b><span style="color:#CD5C5C">Enhancing Inference for Large Language Models</span></b>!</span></li>
-        <li><span class="date">Sep 2024</span> <span>Our 2 papers on <b><span style="color:#CD5C5C">prompt optimization</span></b> and <b><span style="color:#CD5C5C">exemplar selection</span></b> accepted to NeurIPS 2024!</span></li>
-        <li><span class="date">Sep 2024</span> <span>Gave a talk at HKUST(GZ), AI Thrust Seminars on the topic of "Prompt Optimization for LLMs"!</span></li>
-        <li><span class="date">Aug 2024</span> <span>Invited to serve as an <b><span style="color:#CD5C5C">Area Chair for ICLR 2025</span></b>!</span></li>
-        <li><span class="date">Aug 2024</span> <span>I've joined CUHKSZ as an Assistant Professor and Presidential Young Fellow!</span></li> -->
-<!--       </ul>
-    </section>
- -->
-
-<!-- 
-    <section id="education" class="experience-list">
-      <h2>Education</h2>
-        <ul>
-            <li>
-                <span class="job-title">Ph.D. in Artificial Intelligence</span> &bull; Aug 2017 - Apr 2021<br>
-                <span class="company">National University of Singapore (NUS)</span>
-                 <ul>
-                    <li>Advisors: <a href="https://www.comp.nus.edu.sg/~lowkh/index.html">Bryan Kian Hsiang Low</a> (NUS) & <a href="http://web.mit.edu/jaillet/www/">Patrick Jaillet</a> (MIT)</li>
-                    <li>Supported by Singapore-MIT Alliance for Research and Technology (SMART) Graduate Fellowship</li>
-                </ul>
-            </li>
-            <li>
-                <span class="job-title">Bachelor of Engineering (Electrical Engineering)</span> &bull; Aug 2011 - Jun 2015<br>
-                <span class="company">National University of Singapore (NUS)</span>
-                <ul>
-                    <li>First Class Honors</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-    
-    <section id="experience" class="experience-list">
-      <h2>Experience</h2>
-        <ul>
-            <li>
-                <span class="job-title">Assistant Professor</span> &bull; Aug 2024 - Present<br>
-                <span class="company">The Chinese University of Hong Kong, Shenzhen (CUHKSZ)</span>
-            </li>
-            <li>
-                <span class="job-title">Postdoctoral Associate</span> &bull; Jan 2024 - Jun 2024<br>
-                <span class="company">Massachusetts Institute of Technology (MIT)</span>
-                 <ul>
-                    <li>Laboratory for Information and Decision Systems (LIDS)</li>
-                    <li>Advisor: Prof. <a href="http://web.mit.edu/jaillet/www/">Patrick Jaillet</a></li>
-                </ul>
-            </li>
-            <li>
-                <span class="job-title">Postdoctoral Fellow</span> &bull; Apr 2021 - Dec 2023<br>
-                <span class="company">National University of Singapore (NUS)</span>
-                <ul>
-                    <li>Department of Computer Science</li>
-                    <li>Advisor: Assoc. Prof. <a href="https://www.comp.nus.edu.sg/~lowkh/index.html">Bryan Kian Hsiang Low</a></li>
-                </ul>
-            </li>
-        </ul>
-    </section> -->
-
-    <section id="preprints">
-        <h2>Recent Preprints</h2>
-        <p>* denotes equal contribution, <span>&#8224;</span> denotes corresponding author, <span>&#127891;</span> denotes my students.</p>
-        <ol class="publication-list">
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2511.11635">EduAgentQG: A Multi-Agent Workflow Framework for Personalized Question Generation.</a></p>
-                <p class="authors">Rui Jia, Min Zhang, Fengrui Liu, Bo Jiang, Kun Kuang, <b>Zhongxiang Dai</b></p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2511.11635">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2511.08873">UCO: A Multi-Turn Interactive Reinforcement Learning Method for Adaptive Teaching with Large Language Models.</a></p>
-                <p class="authors">Shouang Wei, Min Zhang, Xin Lin, Bo Jiang, Kun Kuang, <b>Zhongxiang Dai</b></p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2511.08873">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2509.24696">T-POP: Test-Time Personalization with Online Preference Feedback.</a></p>
-                <p class="authors">Zikun Qu<span>&#127891;</span>, Min Zhang<span>&#8224;</span>, Mingze Kong<span>&#127891;</span>, Xiang Li, Zhiwei Shang<span>&#127891;</span>, Zhiyong Wang, Yikun Ban, Shuang Qiu, Yao Shu, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2509.24696">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2509.24701">FedPOB: Sample-Efficient Federated Prompt Optimization via Bandits.</a></p>
-                <p class="authors">Pingchen Lu*<span>&#127891;</span>, Zhi Hong*<span>&#127891;</span>, Zhiwei Shang<span>&#127891;</span>, Zhiyong Wang, Yikun Ban, Yao Shu, Min Zhang, Shuang Qiu, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2509.24701">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2502.00728">Meta-Prompt Optimization for LLM-Based Sequential Decision Making.</a></p>
-                <p class="authors">Mingze Kong<span>&#127891;</span>, Zhiyong Wang, Yao Shu, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-                <p class="venue">ICLR 2025 Workshop on Reasoning and Planning for Large Language Models. <a href="https://arxiv.org/abs/2502.00728">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2502.01118">Large Language Model-Enhanced Multi-Armed Bandits.</a></p>
-                <p class="authors">Jiahang Sun*<span>&#127891;</span>, Zhiyong Wang*, Runhan Yang*<span>&#127891;</span>, Chenjun Xiao, John C.S. Lui, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-                <p class="venue">ICLR 2025 Workshop on Reasoning and Planning for Large Language Models. <a href="https://arxiv.org/abs/2502.01118">[arXiv]</a></p>
-            </li>
-<!--             <li>
-                <p class="title"><a href="https://arxiv.org/abs/2502.01085">Federated Linear Dueling Bandits.</a></p>
-                <p class="authors">Xuhan Huang<span>&#127891;</span>, Yan Hu, Zhiyan Li<span>&#127891;</span>, Zhiyong Wang, Benyou Wang, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2502.01085">[arXiv]</a></p>
-            </li> -->
-<!--             <li>
-                <p class="title"><a href="https://arxiv.org/abs/2506.17252">Adaptive Sample Scheduling for Direct Preference Optimization.</a></p>
-                <p class="authors">Zixuan Huang, Yikun Ban, Lean Fu, Xiaojie Li, <b>Zhongxiang Dai</b>, Jianxin Li, Deqing Wang</p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2506.17252">[arXiv]</a></p>
-            </li> -->
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2504.12016">Active Human Feedback Collection via Neural Contextual Dueling Bandits.</a></p>
-                <p class="authors">Arun Verma, Xiaoqiang Lin, <b>Zhongxiang Dai</b>, Daniela Rus, Bryan Kian Hsiang Low</p>
-                <p class="venue">ICLR 2025, Workshop on on Bidirectional Human-AI Alignment. <a href="https://arxiv.org/abs/2504.12016">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2505.19241">ActiveDPO: Active Direct Preference Optimization for Sample-Efficient Alignment.</a></p>
-                <p class="authors">Xiaoqiang Lin, Arun Verma, <b>Zhongxiang Dai</b>, Daniela Rus, See-Kiong Ng, Bryan Kian Hsiang Low</p>
-                <p class="venue">Preprint, 2025. <a href="https://arxiv.org/abs/2505.19241">[arXiv]</a></p>
-            </li>
-            <li>
-                <p class="title"><a href="https://arxiv.org/abs/2405.17346">Prompt Optimization with Human Feedback.</a></p>
-                <p class="authors">Xiaoqiang Lin, <b>Zhongxiang Dai</b><span>&#8224;</span>, Arun Verma, See-Kiong Ng, Patrick Jaillet and Kian Hsiang Low.</p>
-                <p class="venue">ICML 2024 Workshop on Models of Human Feedback for AI Alignment. (Selected as Oral) <a href="https://arxiv.org/abs/2405.17346">[arXiv]</a></p>
-            </li>
-<!--             <li>
-                <p class="title"><a href="https://arxiv.org/abs/2505.11323">Convergence Rates of Constrained Expected Improvement.</a></p>
-                <p class="authors">Haowei Wang, Jingyi Wang, <b>Zhongxiang Dai</b>, Nai-Yuan Chiang, Szu Hui Ng, Cosmin G. Petra.</p>
-                <p class="venue">Pre-print, 2025. <a href="https://arxiv.org/abs/2505.11323">[arXiv]</a></p>
-            </li> -->
-<!--             <li>
-                <p class="title"><a href="https://arxiv.org/abs/2308.04077">Federated Zeroth-Order Optimization using Trajectory-Informed Surrogate Gradients.</a></p>
-                <p class="authors">Yao Shu, Xiaoqiang Lin, <b>Zhongxiang Dai</b><span>&#8224;</span> and Kian Hsiang Low</p>
-                <p class="venue">ICML 2024 Workshop on Differentiable Almost Everything. <a href="https://arxiv.org/abs/2308.04077">[arXiv]</a></p>
-            </li> -->
-        </ol>
-        <style>
-          #preprints .publication-list { counter-reset: publication 10; }
-          #preprints .publication-list li::before { content: "[P" counter(publication) "]"; counter-increment: publication -1; }
-        </style>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <p>* denotes equal contribution, <span>&#8224;</span> denotes corresponding author, <span>&#127891;</span> denotes my students.</p>
-      <ol class="publication-list">
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2502.01085">Federated Linear Dueling Bandits.</a></p>
-            <p class="authors">Xuhan Huang<span>&#127891;</span>, Yan Hu, Zhiyan Li<span>&#127891;</span>, Zhiyong Wang, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-            <p class="venue">AAAI 2026. <a href="https://arxiv.org/abs/2502.01085">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2505.11323">Convergence Rates of Constrained Expected Improvement.</a></p>
-            <p class="authors">Haowei Wang, Jingyi Wang, <b>Zhongxiang Dai</b>, Nai-Yuan Chiang, Szu Hui Ng, Cosmin G. Petra.</p>
-            <p class="venue">NeurIPS 2025 (Spotlight). <a href="https://arxiv.org/abs/2505.11323">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2506.17252">Adaptive Sample Scheduling for Direct Preference Optimization.</a></p>
-            <p class="authors">Zixuan Huang, Yikun Ban, Lean Fu, Xiaojie Li, <b>Zhongxiang Dai</b>, Jianxin Li, Deqing Wang</p>
-            <p class="venue">NeurIPS 2025. <a href="https://arxiv.org/abs/2506.17252">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2310.00646">Source Attribution for Large Language Model-Generated Data.</a></p>
-            <p class="authors">Jingtan Wang*, Xinyang Lu*, Zitong Zhao*, <b>Zhongxiang Dai</b>, Chuan-Sheng Foo, See-Kiong Ng and Kian Hsiang Low</p>
-            <p class="venue">ACL Findings 2025 <a href="https://arxiv.org/abs/2310.00646">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2502.02079">Online Clustering of Dueling Bandits.</a></p>
-            <p class="authors">Zhiyong Wang, Jiahang Sun<span>&#127891;</span>, Mingze Kong<span>&#127891;</span>, Jize Xie, Qinghua Hu, John C.S. Lui, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-            <p class="venue">ICML 2025 <a href="https://arxiv.org/abs/2502.02079">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2502.01014">Refining Adaptive Zeroth-Order Optimization at Ease.</a></p>
-            <p class="authors">Yao Shu, Qixin Zhang, Kun He, <b>Zhongxiang Dai</b><span>&#8224;</span></p>
-            <p class="venue">ICML 2025 <a href="https://arxiv.org/abs/2502.01014">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://jmlr.org/papers/v26/22-0523.html">Adjusted Expected Improvement for Cumulative Regret Minimization in Noisy Bayesian Optimization.</a></p>
-            <p class="authors">Shouri Hu, Haowei Wang, <b>Zhongxiang Dai</b>, Kian Hsiang Low and Szu Hui Ng.</p>
-            <p class="venue">Journal of Machine Learning Research (JMLR), 2025 <a href="https://jmlr.org/papers/v26/22-0523.html">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2407.17112">Neural Dueling Bandits: Principled Preference-Based Optimization with Non-Linear Reward Function.</a></p>
-            <p class="authors">Arun Verma*, <b>Zhongxiang Dai</b>*<span>&#8224;</span>, Xiaoqiang Lin, Patrick Jaillet and Kian Hsiang Low.</p>
-            <p class="venue">ICLR 2025 <a href="https://arxiv.org/abs/2407.17112">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2405.16122">Prompt Optimization with EASE? Efficient Ordering-aware Automated Selection of Exemplars.</a></p>
-            <p class="authors">Zhaoxuan Wu*, Xiaoqiang Lin*, <b>Zhongxiang Dai</b><span>&#8224;</span>, Wenyang Hu, Yao Shu, See-Kiong Ng, Patrick Jaillet and Kian Hsiang Low.</p>
-            <p class="venue">NeurIPS 2024 <a href="https://arxiv.org/abs/2405.16122">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2403.02993">Localized Zeroth-Order Prompt Optimization.</a></p>
-            <p class="authors">Wenyang Hu*, Yao Shu*, Zongmin Yu, Zhaoxuan Wu, Xiaoqiang Lin, <b>Zhongxiang Dai</b>, See-Kiong Ng and Kian Hsiang Low.</p>
-            <p class="venue">NeurIPS 2024 (Spotlight) <a href="https://arxiv.org/abs/2403.02993">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2406.14473">Data-Centric AI in the Age of Large Language Models.</a></p>
-            <p class="authors">Xinyi Xu, et al.</p>
-            <p class="venue">EMNLP Findings 2024 <a href="https://arxiv.org/abs/2406.14473">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2310.02905">Use Your INSTINCT: INSTruction optimization usIng Neural bandits Coupled with Transformers.</a></p>
-            <p class="authors">Xiaoqiang Lin*, Zhaoxuan Wu*, <b>Zhongxiang Dai</b><span>&#8224;</span>, Wenyang Hu, Yao Shu, See-Kiong Ng, Patrick Jaillet and Kian Hsiang Low.</p>
-            <p class="venue">ICML 2024 <a href="https://arxiv.org/abs/2310.02905">[arXiv]</a><a href="https://github.com/xqlin98/INSTINCT">[Code]</a><a href="https://xqlin98.github.io/INSTINCT/">[Project]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://arxiv.org/abs/2403.07591">Robustifying and Boosting Training-Free Neural Architecture Search.</a></p>
-            <p class="authors">Zhenfeng He, Yao Shu, <b>Zhongxiang Dai</b>, Bryan Kian Hsiang Low.</p>
-            <p class="venue">ICLR 2024 <a href="https://arxiv.org/abs/2403.07591">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/quantum_bo.pdf">Quantum Bayesian Optimization.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>*, Gregory Kang Ruey Lau*, Arun Verma, Yao Shu, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2023 <a href="https://daizhongxiang.github.io/papers/quantum_bo.pdf">[Paper]</a><a href="https://github.com/daizhongxiang/Quantum_Bayesian_Optimization">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/batch_bo_replicable.pdf">Batch Bayesian Optimization For Replicable Experimental Design.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Quoc Phong Nguyen, Sebastian Shenghong Tay, Daisuke Urano, Richalynn Leong, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2023 <a href="https://daizhongxiang.github.io/papers/batch_bo_replicable.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/bandit_aux_feedback.pdf">Exploiting Correlated Auxiliary Feedback in Parameterized Bandits.</a></p>
-            <p class="authors">Arun Verma, <b>Zhongxiang Dai</b>, Yao Shu and Kian Hsiang Low.</p>
-            <p class="venue">NeurIPS 2023 <a href="https://daizhongxiang.github.io/papers/bandit_aux_feedback.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/neural_active_learning.pdf">Training-Free Neural Active Learning with Initialization-Robustness Guarantees.</a></p>
-            <p class="authors">Apivich Hemachandra, <b>Zhongxiang Dai</b><span>&#8224;</span>, Jasraj Singh, See-Kiong Ng and Kian Hsiang Low.</p>
-            <p class="venue">ICML 2023 <a href="https://daizhongxiang.github.io/papers/neural_active_learning.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/fed_neural_bandits.pdf">Federated Neural Bandits.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Yao Shu, Arun Verma, Flint Xiaofeng Fan, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">ICLR 2023 <a href="https://daizhongxiang.github.io/papers/fed_neural_bandits.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/zoo.pdf">Zeroth-Order Optimization with Trajectory-Informed Derivative Estimation.</a></p>
-            <p class="authors">Yao Shu*, <b>Zhongxiang Dai</b>*, Weicong Sng, Arun Verma, Patrick Jaillet and Kian Hsiang Low.</p>
-            <p class="venue">ICLR 2023 <a href="https://daizhongxiang.github.io/papers/zoo.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/aij2023.pdf">Recursive Reasoning-Based Training-Time Adversarial Machine Learning.</a></p>
-            <p class="authors">Yizhou Chen, <b>Zhongxiang Dai</b>, Haibin Yu, Kian Hsiang Low and Teck-Hua Ho.</p>
-            <p class="venue">Artificial Intelligence Journal, 2023 <a href="https://daizhongxiang.github.io/papers/aij2023.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/sto_bnts.pdf">Sample-Then-Optimize Batch Neural Thompson Sampling.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Yao Shu, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2022 <a href="https://arxiv.org/abs/2210.06850">[arXiv]</a><a href="https://github.com/daizhongxiang/sto-bnts">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/hnas.pdf">Unifying and Boosting Gradient-Based Training-Free Neural Architecture Search.</a></p>
-            <p class="authors">Yao Shu, <b>Zhongxiang Dai</b><span>&#8224;</span>, Zhaoxuan Wu and Kian Hsiang Low.</p>
-            <p class="venue">NeurIPS 2022 <a href="https://arxiv.org/abs/2201.09785">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/bo_sdf.pdf">Bayesian Optimization under Stochastic Delayed Feedback.</a></p>
-            <p class="authors">Arun Verma*, <b>Zhongxiang Dai</b>* and Kian Hsiang Low.</p>
-            <p class="venue">ICML 2022 <a href="https://daizhongxiang.github.io/papers/bo_sdf.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/meta-BO.pdf">On Provably Robust Meta-Bayesian Optimization.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Yizhou Chen, Haibin Yu, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">UAI 2022 <a href="https://daizhongxiang.github.io/papers/meta-BO.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/neural_ensemble_search.pdf">Neural Ensemble Search via Bayesian Sampling.</a></p>
-            <p class="authors">Yao Shu, Yizhou Chen, <b>Zhongxiang Dai</b> and Kian Hsiang Low.</p>
-            <p class="venue">UAI 2022 <a href="https://daizhongxiang.github.io/papers/neural_ensemble_search.pdf">[Paper]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://openreview.net/forum?id=v-v1cpNNK_v">NASI: Label- and Data-agnostic Neural Architecture Search at Initialization.</a></p>
-            <p class="authors">Yao Shu, Shaofeng Cai, <b>Zhongxiang Dai</b>, Beng Chin Ooi and Kian Hsiang Low.</p>
-            <p class="venue">ICLR 2022 <a href="https://arxiv.org/abs/2109.00817">[arXiv]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/dp_fbo.pdf">Differentially Private Federated Bayesian Optimization with Distributed Exploration.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2021 <a href="https://daizhongxiang.github.io/papers/dp_fbo.pdf">[Paper]</a><a href="https://github.com/daizhongxiang/Differentially-Private-Federated-Bayesian-Optimization">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/CVaR_BO.pdf">Optimizing Conditional Value-At-Risk of Black-Box Functions.</a></p>
-            <p class="authors">Quoc Phong Nguyen, <b>Zhongxiang Dai</b>, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2021 <a href="https://daizhongxiang.github.io/papers/CVaR_BO.pdf">[Paper]</a><a href="https://github.com/qphong/BayesOpt-LV">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/frl.pdf">Fault-Tolerant Federated Reinforcement Learning with Theoretical Guarantee.</a></p>
-            <p class="authors">Xiaofeng Fan, Yining Ma, <b>Zhongxiang Dai</b>, Wei Jing, Cheston Tan and Kian Hsiang Low.</p>
-            <p class="venue">NeurIPS 2021 <a href="https://daizhongxiang.github.io/papers/frl.pdf">[Paper]</a><a href="https://github.com/flint-xf-fan/Byzantine-Federeated-RL">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/VaR_BO.pdf">Value-at-Risk Optimization with Gaussian Processes.</a></p>
-            <p class="authors">Quoc Phong Nguyen, <b>Zhongxiang Dai</b>, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">ICML 2021 <a href="https://daizhongxiang.github.io/papers/VaR_BO.pdf">[Paper]</a><a href="https://github.com/qphong/BayesOpt-LV">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/fbo.pdf">Federated Bayesian Optimization via Thompson Sampling.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Kian Hsiang Low and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2020 <a href="https://daizhongxiang.github.io/papers/fbo.pdf">[Paper]</a><a href="https://github.com/daizhongxiang/Federated_Bayesian_Optimization">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/R2_B2.pdf">R2-B2: Recursive Reasoning-Based Bayesian Optimization for No-Regret Learning in Games.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Yizhou Chen, Kian Hsiang Low, Patrick Jaillet and Teck-Hua Ho.</p>
-            <p class="venue">ICML 2020 <a href="https://daizhongxiang.github.io/papers/R2_B2.pdf">[Paper]</a><a href="https://github.com/daizhongxiang/R2-B2">[Code]</a><a href="https://slideslive.com/38928476/r2b2-recursive-reasoningbased-bayesian-optimization-for-noregret-learning-in-games?ref=speaker-17344-latest">[Video]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/private_bo.pdf"> Private Outsourced Bayesian Optimization.</a></p>
-            <p class="authors">Dmitrii Kharkovskii, <b>Zhongxiang Dai</b> and Kian Hsiang Low.</p>
-            <p class="venue">ICML 2020 <a href="https://daizhongxiang.github.io/papers/private_bo.pdf">[Paper]</a><a href="https://github.com/Mitan/po-gp-ucb">[Code]</a><a href="https://slideslive.com/38928513/private-outsourced-bayesian-optimization?ref=speaker-17344-latest">[Video]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/bo_bos.pdf">Bayesian Optimization Meets Bayesian Optimal Stopping.</a></p>
-            <p class="authors"><b>Zhongxiang Dai</b>, Haibin Yu, Kian Hsiang Low, and Patrick Jaillet.</p>
-            <p class="venue">ICML 2019 <a href="https://daizhongxiang.github.io/papers/bo_bos.pdf">[Paper]</a><a href="https://github.com/daizhongxiang/Bayesian-Optimization-Meets-Bayesian-Optimal-Stopping">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/uai2019.pdf">Bayesian Optimization with Binary Auxiliary Information.</a></p>
-            <p class="authors">Yehong Zhang, <b>Zhongxiang Dai</b>, and Kian Hsiang Low.</p>
-            <p class="venue">UAI 2019 (Plenary Talk) <a href="https://daizhongxiang.github.io/papers/uai2019.pdf">[Paper]</a><a href="https://github.com/YehongZ/MixedTypeBO">[Code]</a></p>
-        </li>
-        <li>
-            <p class="title"><a href="https://daizhongxiang.github.io/papers/nips2019.pdf">Implicit Posterior Variational Inference for Deep Gaussian Processes.</a></p>
-            <p class="authors">Haibin Yu*, Yizhou Chen*, <b>Zhongxiang Dai</b>, Kian Hsiang Low, and Patrick Jaillet.</p>
-            <p class="venue">NeurIPS 2019 (Spotlight) <a href="https://daizhongxiang.github.io/papers/nips2019.pdf">[Paper]</a><a href="https://github.com/HeroKillerEver/ipvi-dgp">[Code]</a></p>
-        </li>
-      </ol>
-      <style>
-          #publications .publication-list { counter-reset: publication 37; }
-          #publications .publication-list li::before { content: "[" counter(publication) "]"; counter-increment: publication -1; }
-      </style>
-    </section>
-
-<!-- 
-    <section id="grants" class="grants-list">
-      <h2>Funding（科研项目）</h2>
-      <ul>
-        <li>
-      </ul>
-    </section>
- -->
-
-    <section id="honors" class="awards-list">
-      <h2>Awards and Honors</h2>
-      <ul>
-        <li>国家级高层次青年人才</li>
-        <li>Presidential Young Fellow, The Chinese University of Hong Kong, Shenzhen, 2024</li>
-        <li>Dean's Graduate Research Excellence Award, NUS, School of Computing, 2021</li>
-        <li>Research Achievement Award, NUS, School of Computing, 2019 & 2020 (Twice)</li>
-        <li>Singapore-MIT Alliance for Research and Technology (SMART) Graduate Fellowship, 2017</li>
-        <li>ST Electronics Prize (Top student in cohort), NUS, 2012 & 2013 (Twice)</li>
-        <li>Dean’s List, NUS, 2011-2015 (Five times)</li>
-      </ul>
-    </section>
-
-    <section id="service" class="service-list">
-      <h2>Professional Service</h2>
-      <ul>
-        <li><strong>Area Chair:</strong> NeurIPS, ICLR, ICML</li>
-        <li><strong>Conference Reviewer:</strong> NeurIPS, ICML, ICLR, UAI, AISTATS, AAAI, CoRL, CVPR, ICCV, AAMAS, IROS, ICRA, etc.</li>
-        <li><strong>Journal Reviewer:</strong> IEEE TPAMI, Operations Research, SIAM Journal on Optimization, Automatica, TMLR, Neural Networks, IEEE RA-L, etc.</li>
-      </ul>
-    </section>
-  </main>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+    <td id="layout-menu">
+        <div class="menu-category">Home</div>
+        <div class="menu-item"><a href="index.html" class="current">About&nbsp;me</a></div>
+        <div class="menu-item"><a href="publications.html">Publications</a></div>
+        <div class="menu-item"><a href="students.html">Team</a></div>
+        <div class="menu-item"><a href="awards.html">Awards</a></div>
+        <div class="menu-item"><a href="talks.html">Talks</a></div>
+        <div class="menu-item"><a href="services.html">Services</a></div>
+        </td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Zhongxiang Dai (代忠祥)</h1>
 </div>
+<table class="imgtable"><tr><td>
+<img src="images/icml_2023_at_hawaii.jpeg" alt="Zhongxiang Dai" width="200px" />&nbsp;</td>
+<td align="left"><p>Zhongxiang Dai <br />
+Assistant Professor<br />
+Presidential Young Fellow<br />
+国家级高层次青年人才<br />
+<a href="https://sds.cuhk.edu.cn/en" target="_blank">School of Data Science (SDS)</a><br />
+<a href="https://www.cuhk.edu.cn/en" target="_blank">The Chinese University of Hong Kong, Shenzhen</a><br />
+<br />
+Email: daizhongxiang [at] cuhk.edu.cn <br />
+<br>
+[<a href="https://scholar.google.com/citations?user=1v8xOIYAAAAJ&hl=en" target="_blank">Google Scholar</a>]&nbsp;
+[<a href="https://twitter.com/Dai_Zh" target="_blank">Twitter</a>]&nbsp;
+[<a href="https://github.com/daizhongxiang" target="_blank">GitHub</a>]
+<br /></p>
+</td></tr></table>
+<h2>About me</h2>
+<p>
+I am an Assistant Professor (Presidential Young Fellow) at the School of Data Science (SDS), The Chinese University of Hong Kong, Shenzhen (CUHKSZ) since Aug 2024.
+<b><span style="color:#CD5C5C">We have many openings for PhD/MPhil students for 2026 Fall admission, and we are also looking for Research Assistants and visiting students/interns</span></b>.
+</p>
 
-  <a href="https://info.flagcounter.com/5tZn"><img src="https://s01.flagcounter.com/count2/5tZn/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+<p>
+I work on both the theory and applications of AI/machine learning. On the practical side, I'm mostly interested in large language models (LLMs), including <b>LLM-based agents, personalization of LLMs, LLM routing, LLM-based social simulation, prompt optimization, and RLHF/DPO</b>.
+On the theoretical side, I'm mainly interested in the theoretical study of <b>multi-armed bandits</b>.
+I have served as the Area Chair (AC) for NeurIPS, ICML and ICLR.
+</p>
 
+<p>
+My research has received supports from multiple grants, such as:
+</p>
+<ul>
+    <li>Guangdong Provincial NSF Excellent Young Scientists Fund (广东省自然科学基金优秀青年项目)</li>
+    <li>NSFC Young Scientist Fund (国家自然科学基金青年基金(C类))</li>
+    <li>Shenzhen NSF General Program (深圳市自然科学基金面上项目)</li>
+    <li>Collaboration project with Huawei on LLM Agents (华为大模型智能体合作项目)</li>
+    <li>Huawei Young Scholars (华为青年学者)</li>
+</ul>
+
+<h2>Experiences</h2>
+<p>
+From Jan 2024 to Jun 2024, I worked as a Postdoctoral Associate at MIT, Laboratory for Information and Decision Systems (LIDS), advised by Prof. <a href="https://web.mit.edu/jaillet/www/" target="_blank">Patrick Jaillet</a>.
+From 2021 to 2023, I was a Postdoctoral Fellow at the National University of Singapore (NUS) with Prof. <a href="https://www.comp.nus.edu.sg/~lowkh/" target="_blank">Bryan Kian Hsiang Low</a>.
+I obtained my Ph.D. in Computer Science from NUS (2017-2021), co-advised by Prof. Bryan Kian Hsiang Low (NUS) and Prof. Patrick Jaillet (MIT). My Ph.D. study was supported by Singapore-MIT Alliance for Research and Technology (SMART) Graduate Fellowship.
+In 2015, I obtained my undergraduate degree from NUS, Electrical Engineering with first class honors.
+</p>
+
+</td>
+</tr>
+</table>
 </body>
 </html>
