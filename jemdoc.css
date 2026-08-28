@@ -39,7 +39,8 @@ body {
     background: white;
     text-align: left;
     vertical-align: top;
-    width: 1000px;
+    width: auto;
+    max-width: 1000px;
 }
 
 #layout-menu a {
@@ -360,9 +361,66 @@ tr.heading {
 
 img {
     border: none;
+    max-width: 100%;
+    height: auto;
 }
 
 table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
+}
+
+@media screen and (max-width: 720px) {
+    table#tlayout,
+    table#tlayout > tbody,
+    table#tlayout > tbody > tr {
+        display: block;
+        width: 100%;
+    }
+
+    #layout-menu,
+    #layout-content {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    #layout-menu {
+        padding: 0.5em 0.75em;
+        white-space: normal;
+    }
+
+    #layout-menu .menu-category {
+        display: none;
+    }
+
+    #layout-menu .menu-item {
+        display: inline-block;
+        margin-right: 0.75em;
+        padding-left: 0;
+        text-indent: 0;
+    }
+
+    #layout-menu a {
+        margin-left: 0;
+    }
+
+    #layout-content {
+        max-width: none;
+        padding: 0 0.75em;
+        overflow-wrap: anywhere;
+    }
+
+    table.imgtable,
+    table.imgtable > tbody,
+    table.imgtable > tbody > tr,
+    table.imgtable > tbody > tr > td {
+        display: block;
+        width: auto;
+    }
+
+    table.imgtable td {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
